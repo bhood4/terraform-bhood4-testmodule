@@ -1,8 +1,8 @@
 provider "google" { }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance"
-  machine_type = var.name
+  name         = var.name
+  machine_type = "n1-standard-2"
 
   boot_disk {
     initialize_params {
@@ -18,4 +18,3 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 }
-

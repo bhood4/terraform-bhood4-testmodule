@@ -1,3 +1,3 @@
-# Terraform Cloud Getting Started Guide Example
+# Test Module
 
-This is an example Terraform configuration intended for use with the Terraform Cloud Getting Started Guide hosted at https://learn.hashicorp.com/terraform/cloud-gettingstarted/tfc_overview
+This is an example Terraform module for use with the Terraform Cloud hosted at https://app.terraform.io

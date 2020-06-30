@@ -11,7 +11,6 @@ resource "google_compute_subnetwork" "my_subnetwork" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  #count = 0
   name         = var.name
   machine_type = "n1-standard-2"
 

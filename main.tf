@@ -6,7 +6,7 @@ data "google_compute_network" "my_network" {
 
 resource "google_compute_subnetwork" "my_subnetwork" {
   name          = "test-subnetwork"
-  ip_cidr_range = "10.2.0.0/16"
+  ip_cidr_range = "10.3.0.0/16"
   network       = data.google_compute_network.my_network.self_link
 }
 

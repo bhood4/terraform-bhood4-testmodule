@@ -11,7 +11,7 @@ resource "google_compute_subnetwork" "my_subnetwork" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  count = 0
+  #count = 0
   name         = var.name
   machine_type = "n1-standard-2"
 
@@ -21,7 +21,7 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   network_interface {
-    subnetwork = data.google_compute_subnetwork.my_subnetwork.self_link
+    subnetwork = google_compute_subnetwork.my_subnetwork.self_link
     access_config {
     }
   }

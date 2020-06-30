@@ -3,8 +3,11 @@ provider "google" { }
 data "google_compute_network" "my_network" {
   name = "default"
 }
-data "google_compute_subnetwork" "my_subnetwork" {
-  name   = "default"
+
+resource "google_compute_subnetwork" "my_subnetwork" {
+  name          = "test-subnetwork"
+  ip_cidr_range = "10.2.0.0/16"
+  network       = data.google_compute_network.my_network.self_link
 }
 
 resource "google_compute_instance" "vm_instance" {

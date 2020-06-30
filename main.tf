@@ -22,7 +22,5 @@ resource "google_compute_instance" "vm_instance" {
   }
   network_interface {
     subnetwork = google_compute_subnetwork.my_subnetwork.self_link
-    access_config {
-    }
   }
 }

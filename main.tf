@@ -1,5 +1,3 @@
-provider "google" { }
-
 data "google_compute_network" "my_network" {
   name = "default"
 }

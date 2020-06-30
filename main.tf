@@ -9,12 +9,4 @@ resource "google_compute_instance" "vm_instance" {
       image = "debian-cloud/debian-9"
     }
   }
-
-  network_interface {
-    # A default network is created for all GCP projects
-    #network       = "default"
-    network       = "random-ip-range-pods"
-    access_config {
-    }
-  }
 }
